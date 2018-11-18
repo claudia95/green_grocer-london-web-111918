@@ -42,9 +42,9 @@ def apply_clearance(cart)
 end
 
 def checkout(cart, coupons)
-  consolidated_cart = consolidate_cart(cart => cart)
-  applied_coupons = apply_coupons(cart => consolidated_cart, coupons => coupons)
-  applied_clearance = apply_clearance(cart => applied_coupons)
+  consolidated_cart = consolidate_cart(cart: cart)
+  applied_coupons = apply_coupons(cart: consolidated_cart, coupons: coupons)
+  applied_clearance = apply_clearance(cart: applied_coupons)
   total_price = 0
   
   apply_clearance.each do |food, info|
