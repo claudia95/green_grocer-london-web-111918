@@ -49,6 +49,7 @@ def checkout(cart, coupons)
   cart.each do |food, info|
     total_price += (info[:price] * info[:count]).to_f
   end
+  cart
   if total_price > 100 
     total_price * 0.9 
   else
